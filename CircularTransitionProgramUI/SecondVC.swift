@@ -12,11 +12,11 @@ class SecondVC: UIViewController {
     
     lazy var button: UIButton = {
         let b = UIButton()
-        b.backgroundColor = .white
-        b.layer.cornerRadius = 25
+        b.backgroundColor = Colors.subColor
+        b.layer.cornerRadius = 35
         b.layer.masksToBounds = true
         b.setTitle("X", for: .normal)
-        b.setTitleColor(#colorLiteral(red: 1, green: 0.3864146769, blue: 0.4975627065, alpha: 1), for: .normal)
+        b.setTitleColor(Colors.textcolor, for: .normal)
         b.translatesAutoresizingMaskIntoConstraints = false
         b.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
         return b
@@ -25,11 +25,11 @@ class SecondVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = #colorLiteral(red: 1, green: 0.3864146769, blue: 0.4975627065, alpha: 1)
+        view.backgroundColor = Colors.mainColor
         view.addSubview(button)
         button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        button.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 70).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 70).isActive = true
         button.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
     }
     
